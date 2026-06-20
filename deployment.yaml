@@ -1,1 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
 
+metadata:
+  name: employee-api
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: employee-api
+
+  template:
+    metadata:
+      labels:
+        app: employee-api
+
+    spec:
+      containers:
+      - name: employee-api
+        image: parvathi2003/employee-api:v2
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080

@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: employee-api
-        image: parvathi2003/employee-api:v2
+        image: parvathi2003/employee-api:v3
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
